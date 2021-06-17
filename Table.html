@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Recursion V/s Iteration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: green;">
+
+<div class="container">
+  <h2 style="color: aliceblue;">DS Asgmt-2</h2>
+  <h3>Difference between <span style="color:orange;">Recursion</span>  and <span style="color: orange;">Iteration</span></h3>            
+  <table class="table table-dark table-striped">
+    <thead>
+        <tr>
+          <th>Property</th>
+          <th>Recursion</th>
+          <th>Iteration</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr>
+      <td>
+          <b>Definition</b>
+      </td>
+          <td>
+              <span style="font-weight:400">Function calls itself.</span>
+      </td>
+      <td>
+              <span style="font-weight:400">A set of instructions repeatedly executed.</span>
+          </td>
+      </tr>
+      <tr>
+          <td><b>Application</b></td>
+          <td>
+              <span style="font-weight:400">For functions.</span>
+          </td>
+          <td>
+              <span style="font-weight:400">For loops.</span>
+          </td>
+      </tr>
+      <tr>
+          <td><b>Termination</b></td>
+          <td>
+              <span style="font-weight:400">Through base case, where there will be no function call.</span></td><td>
+              <span style="font-weight:400">When the termination condition for the iterator ceases to be satisfied.</span></td>
+          </tr>
+          <tr>
+              <td>
+                  <b>Usage</b>
+
+              </td>
+             </td>
+          <td>
+              <span style="font-weight:400">Used when code size needs to be small, and time complexity is not an issue.</span></td>
+          <td>
+              <span style="font-weight:400">Used when time complexity needs to be balanced against an expanded code size.</span></td></tr>
+              <tr>
+                <td>
+                    <b>Speed</b>
+                  </td>
+                    <td>
+                        <span style="font-weight:400">Slow in execution.</span>
+                   </td>
+                <td>
+                    <span style="font-weight:400">Faster in execution</span>
+                </td>
+              </tr>
+              <tr>
+              <td>
+                  <b>Code Size</b></td><td><span style="font-weight:400">Smaller code size</span>
+              </td>
+              <td>
+                  <span style="font-weight:400">Larger Code Size.</span></td></tr><tr><td><b>Time Complexity</b>
+              </td>
+               <td>
+                      <span style="font-weight:400">Very high(generally exponential) time complexity.</span>
+               </td>
+               <td>
+                      <span style="font-weight:400">Relatively lower time complexity(generally polynomial-logarithmic).</span>
+              </td>
+            </tr>
+           
+            <tr>
+                <td>
+                    <b>Overhead</b>
+                  </td>
+                    <td>
+                        <span style="font-weight:400">Recursion possesses the overhead of repeated function calls.</span>
+                   </td>
+                <td>
+                    <span style="font-weight:400">No overhead of repeated function call.</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <b>Example</b>
+                  </td>
+                    <td>
+                        <span style="font-weight:400">int factorial(int num)
+                            <br>{
+                            int answer;<br>
+                            if (num==1) {<br>
+                            return 1;
+                            }<br>else{<br>
+                            answer = factorial(num-1) * num;<br> //recursive calling
+                            }<br>
+                            
+                            return (answer);
+                            }
+                        </span>
+                   </td>
+                <td>
+                    <span style="font-weight:400">int factorial(int num){<br>
+                        int answer=1;<br> //needs initialization because it may contain a garbage value before its initialization
+                        <br> for(int t =1; t>num; t++) <br>//iteration
+                        {
+                        answer=answer * (t);<br>
+                        return (answer);
+                        }
+                        <br> }</span>
+                </td>
+              </tr>
+
+
+       </tbody>
+    </table>
+</div>
+
+  
+</body>
+</html>
